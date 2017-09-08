@@ -8,42 +8,24 @@ var express = require('express');
 
 var app = express();
 
+// configurando ao template engine EJS
+app.set('view-engine','ejs');
+
 
 /**
  * Respondendo Requições com express e node Js
  * 
  */
 app.get('/',function(req,res){
-    res.send(`
-   <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Index | Home</title>
-        </head>
-
-        <body>
-           <h1>Pagina Homeee!! </h1>
-        </body>
-
-    </html>
-    
-    `);
+    // renderizando os templates Engine Ejs que 
+    // estao na pasta View -> site -> home
+    res.render('site/home.ejs');
 });
 
 app.get('/contato',function(req,res){
-    res.send(`
-   <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Contato</title>
-        </head>
-
-        <body>
-           <h1>Pagina Contato !! </h1>
-        </body>
-
-    </html>
-`);
+    // renderizando os templates Engine Ejs que 
+    // estao na pasta View -> site -> contato
+    res.render('site/contato.ejs');
 });
 
 //  Informando a porta que o servidor local vai rodar e uma função de callback

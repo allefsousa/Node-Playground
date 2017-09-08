@@ -8,6 +8,15 @@ var express = require('express');
 
 var app = express();
 
+//importando o modulo criado localmente
+var meuModulo = require('./modulo_externo');
+
+// exibindo os dados do  modulo no caso String
+console.log(meuModulo);
+
+// Executando e exbindo Valores De Funções do  modulo ();
+console.log(meuModulo());
+
 // configurando ao template engine EJS
 app.set('view-engine','ejs');
 

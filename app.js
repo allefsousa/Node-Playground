@@ -47,7 +47,7 @@ var server = http.createServer(function(req,res){
    <!DOCTYPE html>
     <html>
         <head>
-            <title>Erro 404</title>
+            <title>Pagina Qualquer</title>
         </head>
 
         <body>
